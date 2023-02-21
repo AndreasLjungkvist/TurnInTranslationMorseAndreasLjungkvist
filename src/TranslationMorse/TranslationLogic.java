@@ -13,6 +13,7 @@ public class TranslationLogic {
     private HashMap<String,String> transHash= new HashMap<>();
     private String textData;
     private ArrayList<String> commaSeparatedAL= new ArrayList<>();
+
     public TranslationLogic (String textInput) {
         textData = textInput;
     }
@@ -41,15 +42,18 @@ public class TranslationLogic {
             commaSeparatedAL.add(commaSeparated[i]);
         }
     }
-
     public ArrayList<String> getArrayList() { return commaSeparatedAL;
     }
 
-   /* public  getHMap() {
+    public void clearArrayList() {
+        commaSeparatedAL.clear();
     }
-
-    /*public String setText(String textInput) {
-
+   /* public boolean isLetter(String alphabet){
+        for (int i=0;i<alphabet.length();i++) {
+            if (textData.contains(alphabet.charAt(i))) {
+            }
+            something=something;
+        }
+        return true;
     }*/
-
 }

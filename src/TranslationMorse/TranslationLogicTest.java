@@ -66,4 +66,17 @@ class TranslationLogicTest {
         //Assert
         assertEquals(expected, actual);
     }
+    @Test
+    public void clearDataAL() {
+        //Arrange
+        TranslationLogic logicTrans = new TranslationLogic("A,B,C,D,E");
+        //Act
+        logicTrans.putArraysToHashMap();
+        logicTrans.splitByCommaToArrayList();
+        logicTrans.clearArrayList();
+        ArrayList<String> actual = logicTrans.getArrayList();
+        ArrayList<String> expected = new ArrayList<>();
+        //Assert
+        assertEquals(expected, actual);
+    }
 }
