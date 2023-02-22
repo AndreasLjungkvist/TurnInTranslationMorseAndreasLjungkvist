@@ -1,5 +1,6 @@
 package TranslationMorse;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -48,12 +49,36 @@ public class TranslationLogic {
     public void clearArrayList() {
         commaSeparatedAL.clear();
     }
-   /* public boolean isLetter(String alphabet){
-        for (int i=0;i<alphabet.length();i++) {
-            if (textData.contains(alphabet.charAt(i))) {
+
+    //isMorseSymbols kollar inmatningen mot element i array "morse" för bool true or false.
+    //isLetter kollar inmatning element mot array för latinska alfabetet.
+    public boolean isLetter(String textInAlphabet){
+        boolean latBool = false;
+        for (int i=0;i<textInAlphabet.length();i++) {
+            if (textInAlphabet.contains(alphabet[i])){
+                latBool = true;
             }
-            something=something;
         }
-        return true;
-    }*/
+        return latBool;
+    }
+
+    public boolean isMorseSymbols(String textIn){
+        boolean latBool = false;
+        for (int i=0;i<textIn.length();i++) {
+            if (textIn.contains(morse[i])){
+                latBool = true;
+            }
+        }
+        return latBool;
+    }
+    //textDataCommaFormatting tillsammans med isLetter kollar om det är latinska alfabetet,
+    //och genererar då komma-separation av sig själv för att underlätta för användaren.
+    public String textDataCommaFormatting(){
+        String textDataFormatted="";
+        for (int i=0;i<textData.length();i++){
+            textDataFormatted += textData.charAt(i) +",";
+        }
+        textData = textDataFormatted;
+        return textData;
+    }
 }

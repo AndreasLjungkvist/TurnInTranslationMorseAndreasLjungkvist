@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38aef3e7-06ed-4f64-935b-0307cead94a7" name="Changes" comment="First iteration">
+    <list default="true" id="38aef3e7-06ed-4f64-935b-0307cead94a7" name="Changes" comment="Second iteration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TranslationMorse/TranslationLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TranslationMorse/TranslationLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TranslationMorse/TranslationLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TranslationMorse/TranslationLogicTest.java" afterDir="false" />
@@ -15,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -112,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677004011635</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Second iteration">
+      <created>1677012636147</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677012636147</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,6 +136,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First iteration" />
-    <option name="LAST_COMMIT_MESSAGE" value="First iteration" />
+    <MESSAGE value="Second iteration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second iteration" />
   </component>
 </project>

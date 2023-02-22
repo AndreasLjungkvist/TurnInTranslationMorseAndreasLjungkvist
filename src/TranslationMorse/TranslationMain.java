@@ -21,26 +21,35 @@ public class TranslationMain {
                     "4: Exit Program");
             inputSwitch = Integer.parseInt(scan.nextLine());
             switch(inputSwitch) {
-                case 1:
+               /* case 1:
                     System.out.println("Give an input to translate:\n"+
                             "(Separate letters and corresponding morse signs with comma ex:'a,b,c' or '*,-**'");
                     logicTrans.setTextData(scan.nextLine().toUpperCase());
                     logicTrans.splitByCommaToArrayList();
-                    break;
+                    break;*/
                     //Påbörjad förbättring för att få bort komma från inmatning.
-                /*case 1:
+                case 1:
                     System.out.println("Give an input to translate:");
                     logicTrans.setTextData(scan.nextLine().toUpperCase());
-                    if (logicTrans.getTextData().isLetter("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890.? ")){
-                        System.out.println("It contained symbols.");
-                    }
-                    else if (logicTrans.getTextData().contains("*")||logicTrans.getTextData().contains("*") ){
-                        System.out.println("Adding to morse.");
+                    if (logicTrans.isLetter(logicTrans.getTextData()) && logicTrans.isMorseSymbols(logicTrans.getTextData())){
+                        System.out.println("It seems your input contained a mixture of the latin and morse alphabet.\n" +
+                                "The program will try to save and translate them together, the latin alphabet ");
                         logicTrans.splitByCommaToArrayList();
-                    }else{
+                    }
+                    else if (logicTrans.isLetter(logicTrans.getTextData())) {
+                        System.out.println("Adding latin symbols.\n" +
+                                "");
+                        logicTrans.textDataCommaFormatting();
+                        logicTrans.splitByCommaToArrayList();
+                    }
+                    else if (logicTrans.isMorseSymbols(logicTrans.getTextData())) {
+                        System.out.println("Adding to morse.\n" +
+                                "");
+                        logicTrans.splitByCommaToArrayList();
+                    } else{
                         System.out.println("Something went wrong, try again.");
                     }
-                    break;*/
+                    break;
                 case 2:
                     for (int i=0;i<logicTrans.getArrayList().size();i++){
                         String hKey = logicTrans.getArrayList().get(i);
@@ -58,7 +67,8 @@ public class TranslationMain {
                     running = false;
                     break;
                 default:
-
+                    System.out.println("Something went wrong.\n" +
+                            "Please input a value between 1-4.");
                     break;
         }
 

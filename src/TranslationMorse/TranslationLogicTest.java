@@ -79,4 +79,34 @@ class TranslationLogicTest {
         //Assert
         assertEquals(expected, actual);
     }
+    @Test
+    public void testisLetterBoolTrue() {
+        //Arrange
+        TranslationLogic logicTrans = new TranslationLogic("");
+        //Act
+        Boolean actual = logicTrans.isLetter("ABCDEF");
+        Boolean expected = true;
+        //Assert
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void testisLetterBoolFalse() {
+        //Arrange
+        TranslationLogic logicTrans = new TranslationLogic("");
+        //Act
+        Boolean actual = logicTrans.isLetter("*-*-*-");
+        Boolean expected = false;
+        //Assert
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void testisMorseBoolTrue() {
+        //Arrange
+        TranslationLogic logicTrans = new TranslationLogic("");
+        //Act
+        Boolean actual = logicTrans.isMorseSymbols("*-,***,**--**");
+        Boolean expected = true;
+        //Assert
+        assertEquals(expected, actual);
+    }
 }
